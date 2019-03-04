@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="quanlyhopdong.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <meta name="keywords" content="Quản lý hợp đồng">
+    <meta name="theme-color" content="#f39c12">
+    <meta content="INDEX,FOLLOW" name="robots">
+    <meta name="COPYRIGHT" content="© 2018 Quản lý hợp đồng">
+    <meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
+    <meta name="GENERATOR" content="VLUTE CI">
+    <link rel="icon" href="/Content/icon.ico" type="image/x-icon">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body class="sidebar skin-yellow-light sidebar-mini">
+    <form runat="server">
+        <div class="wrapper">
+            <!-- Main Header -->
+            <header class="main-header">
+                <!-- Logo -->
+                <a class="logo" href="/">
+                    <span class="logo-mini">
+                        <img src="../Content/book-icon-2.png" width="28" /></span>
+                    <span class="logo-lg">
+                        <img src="../Content/book-icon-2.png" width="28" />&ensp;<b>QLHĐ</b></span>
+                </a>
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top">
+                    <a href="#" id="btnAnmenu" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li id="meCV">
+                            <a href="/quanly/quanlycv.aspx">
+                                <i class="fa fa-tasks"></i><span>Quản lý CV</span>
+                            </a>
+                        </li>
+                        <li id="meHD">
+                            <a href="/quanly/quanlyhopdong.aspx">
+                                <i class="fa fa-address-card"></i><span>Quản lý hợp đồng</span>
+                            </a>
+                        </li>
+                        <%--        <li class=" active treeview menu-open">
+          <a href="#"><i class="fa fa-search"></i> <span>Tra cứu thông tin</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu" style="display: block;">
+            <li><a href="LichThi"><i class="fa fa-calendar"></i> Lịch thi HV</a></li>
+            <li class="active"><a href="DiemThi"><i class="fa fa-graduation-cap"></i> Điểm thi</a></li>
+            <li><a href="TraCuuVanBang"><i class="fa fa-graduation-cap"></i> Tra cứu văn bằng</a></li>
+          </ul>
+        </li>--%>
+                    </ul>
+                    <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+            <!-- Main Footer -->
+            <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+        </div>
+        
+        <!-- AdminLTE App -->
+        <script type="text/javascript" src="../lab/js/jquery-ui.min.js" defer="defer"></script>
+        <script src="../lte/dist/js/adminlte.min.js" defer="defer"></script>
+        <link href="../lab/css/select2.css" rel="stylesheet" />
+        <script src="../lab/js/select2.full.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../lab/css/jquery-ui.min.css">
+        <script src="../Content/bootbox.js"></script>
+        <script type="text/javascript">(function(){var t;(t=jQuery).bootstrapGrowl=function(s,e){var a,o,l;switch(e=t.extend({},t.bootstrapGrowl.default_options,e),(a=t("<div>")).attr("class","bootstrap-growl alert"),e.type&&a.addClass("alert-"+e.type),e.allow_dismiss&&(a.addClass("alert-dismissible"),a.append('<button  class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&#215;</span><span class="sr-only">Close</span></button>')),a.append(s),e.top_offset&&(e.offset={from:"bottom",amount:e.top_offset}),l=e.offset.amount,t(".bootstrap-growl").each(function(){return l=Math.max(l,parseInt(t(this).css(e.offset.from))+t(this).outerHeight()+e.stackup_spacing)}),(o={position:"body"===e.ele?"fixed":"absolute",margin:0,"z-index":"9999",display:"none"})[e.offset.from]=l+"px",a.css(o),"auto"!==e.width&&a.css("width",e.width+"px"),t(e.ele).append(a),e.align){case"center":a.css({left:"50%","margin-left":"-"+a.outerWidth()/2+"px"});break;case"left":a.css("left","20px");break;default:a.css("right","20px")}return a.fadeIn(),e.delay>0&&a.delay(e.delay).fadeOut(function(){return t(this).alert("close")}),a},t.bootstrapGrowl.default_options={ele:"body",type:"info",offset:{from:"bottom",amount:20},align:"right",width:250,delay:4e3,allow_dismiss:!0,stackup_spacing:10}}).call(this);</script><script type="text/javascript">function tbinfo(mess){$.bootstrapGrowl('<i class="fa fa-spinner fa-spin"></i>  '+mess, {type: 'info',delay: 2000});}function tbsuccess(mess){$.bootstrapGrowl('<i class="fa fa-check"></i>  '+mess, {type: 'success',delay: 2000});}function tbdanger(mess){$.bootstrapGrowl('<i class="fa fa-times"></i>  '+mess, {type: 'danger',delay: 2000});}function tban(){$('.bootstrap-growl').remove();}</script>
+        <asp:PlaceHolder ID="plScript" runat="server"></asp:PlaceHolder>
+
+<script>
+    var searchTimeout = null;
+    function searchValue(grid, index, value) {
+        if (searchTimeout != null) {
+            return false;
+        }
+        if (jQuery.type(value) == "undefined")
+            value = '';
+        for (var i = index; i < grid.ColumnsCollection.length; i++) {
+            if (grid.ColumnsCollection[i].HeaderText != "") {
+                var s = grid.ColumnsCollection[i].DataField;
+                if (grid.ColumnsCollection[i].Visible == true && s != "") {
+                    grid.addFilterCriteria(s, OboutGridFilterCriteria.Contains, value);
+                }
+            }
+        }
+        searchTimeout = window.setTimeout(grid.executeFilter(), 2000);
+        searchTimeout = null;
+        return false;
+    }
+    $(function () {
+        setTimeout(function () {
+            $('#btnAnmenu').trigger('click');
+        }, 100);
+        $('select').select2();
+    })
+</script>
+    </form>
+</body>
+</html>
